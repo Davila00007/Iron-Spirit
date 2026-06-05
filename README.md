@@ -58,19 +58,9 @@ iron-spirit/
 
 ---
 
-##  Cómo usar el proyecto
+##  🌐 Ver proyecto en línea
 
-1. Clona el repositorio:
-```bash
-https://davila00007.github.io/iron-spirit/
-```
-
-2. Abre la carpeta del proyecto en tu editor (VS Code recomendado)
-
-3. Abre el archivo `index.html` en tu navegador o usa la extensión **Live Server** en VS Code
-
-> No requiere instalación de dependencias ni servidor especial.
-
+>https://davila00007.github.io/Iron-Spirit/
 ---
 
 ##  Personalización
@@ -96,8 +86,7 @@ Para adaptar el sitio a tu gym, edita estas variables en `style.css`:
 
 ##  Autor
 
-**Michael Davila Orozco** 
-
+**Davila00007** 
 ---
 
 ##  Aprendizajes del proyecto
@@ -116,6 +105,11 @@ Durante el desarrollo de este proyecto practiqué y apliqué:
 
 ##  Contacto <p align="center"> <a href="https://www.instagram.com/davila00007/"> <img src="https://skillicons.dev/icons?i=instagram" /> </a> <a href="https://www.linkedin.com/in/micchael-davila-orozco/"> <img src="https://skillicons.dev/icons?i=linkedin" /> </a> <a href="mailto:davilamichaelnn@gmail.com"> <img src="https://skillicons.dev/icons?i=gmail&theme=light" /> </a> </p>
 
+---
+
+## ⭐ ¿Te gustó el proyecto?
+
+Si llegaste hasta aquí y el proyecto te pareció interesante, apóyame con una estrella en el repositorio. Es gratis y me ayuda mucho. 😊
 ---
 
 > *"Sin excusas. Sin límites."* — Iron Spirit 💪
