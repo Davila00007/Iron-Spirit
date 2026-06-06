@@ -57,9 +57,9 @@
 
 
 
-// ============================================================
-// CARRUSEL — Iron Spirit
-// ============================================================
+
+// Carrusel 
+
 
 (() => {
 
@@ -140,16 +140,8 @@
 
 
 
+// Filtro de productos en la sección "Productos"
 
-
-
-
- 
- 
-// ============================================================
-// FILTRO DE PRODUCTOS — Iron Spirit
-// ============================================================
- 
 (() => {
     const filtros = document.querySelectorAll('.filtro-btn');
     const tarjetas = document.querySelectorAll('.producto-card');
@@ -176,20 +168,8 @@
 })();
 
 
+// toggle de precios mensuales y anuales en la sección "Precios"
 
-
-
-
-
-
-
-
-
-
-// ============================================================
-// TOGGLE PRICING MENSUAL / ANUAL — Iron Spirit
-// ============================================================
- 
 (() => {
     const toggle = document.getElementById('toggleAnual');
     if (!toggle) return;
@@ -213,14 +193,9 @@
  
 
 
+// Formulario de contacto con mensaje de éxito al enviar
 
 
-
-
-// ============================================================
-// FORMULARIO CONTACT — Iron Spirit
-// ============================================================
- 
 (() => {
     const form    = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
