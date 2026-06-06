@@ -330,10 +330,7 @@ section{
     }
 }
 
-
-/* ============================================================
-   CARRUSEL — Iron Spirit
-   ============================================================ */
+/*Carrusel */
 
 .carousel-section{
     max-width: 1200px;
@@ -504,9 +501,7 @@ section{
 }
 
 
-/* ============================================================
-   SERVICES — Iron Spirit
-   ============================================================ */
+/* Servicios */
 
 .services{
     padding: 5rem 2rem;
@@ -638,11 +633,7 @@ section{
 
 
 
-
-
-/* ============================================================
-   ABOUT BANNER — reemplaza las imágenes alternantes
-   ============================================================ */
+/* ABOUT BANNER — reemplaza las imágenes alternantes */
 
 .about .row .about-banner{
     flex: 1 1 40rem;
@@ -707,9 +698,9 @@ section{
 }
 
 
-/* ============================================================
-   ABOUT BANNER FULL-WIDTH
-   ============================================================ */
+/*ABOUT BANNER FULL-WIDTH */
+
+
 .about-banner-full { /* Contenedor principal del banner */
     width: 100%; /* Hace el banner más ancho que su contenedor (puede generar overflow horizontal) */
     height: 40rem; /* Altura fija del banner */
@@ -770,34 +761,32 @@ section{
 
 
 
-/* ============================================================
-   PRODUCTOS — Iron Spirit
-   ============================================================ */
- 
+/*PRODUCTOS */
+
 .productos {
     padding: 5rem 2rem;
 }
- 
+
 .productos-heading {
     text-align: center;
     margin-bottom: 3rem;
 }
- 
+
 .productos-heading h2 {
     font-size: 3.5rem;
     color: var(--white);
     margin-bottom: 1rem;
 }
- 
+
 .productos-heading h2 span {
     color: var(--color-main);
 }
- 
+
 .productos-heading p {
     font-size: 1.6rem;
     color: rgba(255,255,255,.55);
 }
- 
+
 /* Filtros */
 .productos-filtros {
     display: flex;
@@ -806,7 +795,7 @@ section{
     gap: 1rem;
     margin-bottom: 4rem;
 }
- 
+
 .filtro-btn {
     padding: .8rem 2.4rem;
     font-size: 1.4rem;
@@ -819,21 +808,21 @@ section{
     letter-spacing: .05rem;
     transition: all .25s;
 }
- 
+
 .filtro-btn:hover,
 .filtro-btn.active {
     background: var(--color-main);
     border-color: var(--color-main);
     color: var(--white);
 }
- 
+
 /* Grid */
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
     gap: 2.5rem;
 }
- 
+
 /* Tarjeta */
 .producto-card {
     background: var(--tarjetas);
@@ -841,12 +830,12 @@ section{
     overflow: hidden;
     transition: transform .3s, box-shadow .3s;
 }
- 
+
 .producto-card:hover {
     transform: translateY(-.6rem);
     box-shadow: 0 1.2rem 3rem rgba(255,8,0,.18);
 }
- 
+
 /* Imagen */
 .producto-img {
     height: 22rem;
@@ -855,11 +844,11 @@ section{
     position: relative;
     transition: transform .4s;
 }
- 
+
 .producto-card:hover .producto-img {
     transform: scale(1.04);
 }
- 
+
 .producto-badge {
     position: absolute;
     top: 1.2rem;
@@ -873,39 +862,39 @@ section{
     letter-spacing: .08rem;
     text-transform: uppercase;
 }
- 
+
 /* Info */
 .producto-info {
     padding: 2rem;
 }
- 
+
 .producto-info h3 {
     font-size: 1.8rem;
     color: var(--white);
     font-weight: 700;
     margin-bottom: .8rem;
 }
- 
+
 .producto-info p {
     font-size: 1.4rem;
     color: rgba(255,255,255,.55);
     line-height: 1.6;
     margin-bottom: 1.8rem;
 }
- 
+
 .producto-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 }
- 
+
 .producto-precio {
     font-size: 2rem;
     font-weight: 800;
     color: var(--color-main);
 }
- 
+
 .producto-btn {
     display: inline-flex;
     align-items: center;
@@ -920,23 +909,23 @@ section{
     cursor: pointer;
     transition: background .2s, transform .2s;
 }
- 
+
 .producto-btn:hover {
     background: #c40600;
     transform: scale(1.05);
 }
- 
+
 /* Tarjetas ocultas por filtro */
 .producto-card.hidden {
     display: none;
 }
- 
+
 @media(max-width:768px) {
     .productos-grid {
         grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     }
 }
- 
+
 @media(max-width:450px) {
     .productos-grid { grid-template-columns: 1fr; }
     .productos-heading h2 { font-size: 2.8rem; }
@@ -946,34 +935,33 @@ section{
 
 
 
-/* ============================================================
-   PRICING — Iron Spirit
-   ============================================================ */
- 
+/* PRICING */
+
+
 .pricing {
     padding: 5rem 2rem;
 }
- 
+
 .pricing-heading {
     text-align: center;
     margin-bottom: 3rem;
 }
- 
+
 .pricing-heading h2 {
     font-size: 3.5rem;
     color: var(--white);
     margin-bottom: 1rem;
 }
- 
+
 .pricing-heading h2 span {
     color: var(--color-main);
 }
- 
+
 .pricing-heading p {
     font-size: 1.6rem;
     color: rgba(255,255,255,.55);
 }
- 
+
 /* Toggle */
 .pricing-toggle {
     display: flex;
@@ -1202,10 +1190,8 @@ section{
 
 
 
-/* ============================================================
-   CONTACT — Iron Spirit
-   ============================================================ */
- 
+/*CONTACTO*/
+
 .contact {
     padding: 5rem 2rem;
 }
