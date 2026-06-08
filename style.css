@@ -1253,7 +1253,7 @@ section{
     flex-shrink: 0;
 }
  
-.info-block h4 {
+.info-block h3 {
     font-size: 1.5rem;
     color: var(--color-main);
     font-weight: 700;
@@ -1267,7 +1267,9 @@ section{
     color: rgba(255,255,255,.7);
     line-height: 1.7;
 }
- 
+
+
+
 /* Redes sociales */
 .contact-socials {
     display: flex;
