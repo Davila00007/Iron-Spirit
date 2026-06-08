@@ -7,7 +7,7 @@
 
 
 :root{ /* Define variables globales reutilizables en todo el CSS */
-    --color-main:#ff0800; /* Color principal: */
+    --color-main: #c40600; /* Color principal: */
     --bg-main:#141418; /* color para fondo principales */
     --white:white; /* Blanco suave para textos claros */
     --tarjetas:#0000007a; /* color para fondos de tarjetas */
