@@ -388,19 +388,23 @@
         <h2>Planes de <span>Membresía</span></h2>
         <p>Elige el plan que mejor se adapta a tus objetivos</p>
     </div>
- 
+
     <!-- Toggle mensual / anual -->
-    <div class="pricing-toggle">
-        <span class="toggle-label" id="labelMensual">Mensual</span>
-        <label class="toggle-switch">
-            <input type="checkbox" id="toggleAnual">
-            <span class="toggle-slider"></span>
-        </label>
-        <span class="toggle-label" id="labelAnual">Anual <span class="ahorro-badge">Ahorra 20%</span></span>
-    </div>
- 
+<div class="pricing-toggle">
+    <span class="toggle-label" id="labelMensual">Mensual</span>
+
+    <label class="toggle-switch" for="toggleAnual" aria-label="Cambiar entre plan mensual y anual">
+        <input type="checkbox" id="toggleAnual">
+        <span class="toggle-slider"></span>
+    </label>
+
+    <span class="toggle-label" id="labelAnual">
+        Anual <span class="ahorro-badge">Ahorra 20%</span>
+    </span>
+</div>
+
     <div class="pricing-grid">
- 
+
         <!-- Plan Básico -->
         <div class="pricing-card">
             <div class="pricing-card-header">
