@@ -469,13 +469,13 @@ section{
 .carousel-dots{
     display: flex;
     justify-content: center;
-    gap: .8rem;
+    gap: 1.6rem;
     margin-top: 2rem;
 }
 
 .carousel-dot{
-    width: .8rem;
-    height: .8rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
     background: rgba(255,255,255,.25);
     border: none;
