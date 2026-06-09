@@ -1121,7 +1121,7 @@ section{
  
 .price-period {
     font-size: 1.5rem;
-    color: rgba(255,255,255,.45);
+    color: var(--color-main);
     margin-left: .4rem;
 }
  
@@ -1152,7 +1152,7 @@ section{
 }
  
 .pricing-features li i.fa-xmark {
-    color: rgba(255,255,255,.2);
+    color: var(--color-main);
     font-size: 1.3rem;
     flex-shrink: 0;
 }
