@@ -65,29 +65,57 @@
 <main> <!-- Abre el contenido principal de la página -->
 
 <!--Sección de inicio comienza-->
-<div class="home" id="home"> <!-- Contenedor principal de la sección hero/inicio -->
-    <section class="flex"> <!-- Sección con flexbox para centrar su contenido -->
-        <h1>FITNESS</h1> <!-- Título principal grande de la sección de inicio -->
-        <img src="img/home.webp" alt="Imagen de home de la página" width="1557"
-        height="563"> <!-- Imagen principal del héroe -->
-        
-    </section> <!-- Cierra la sección flex -->
-</div> <!-- Cierra el contenedor home -->
-<!--Sección de inicio termina-->
+<div class="home" id="home">
 
+    <!-- Línea diagonal decorativa (SVG inline, cero requests externos) -->
+    <div class="home-slash" aria-hidden="true"></div>
 
-<!-- la sección acerca  comienza -->
+    <div class="home-content">
 
+        <!-- Eyebrow -->
+        <span class="home-eyebrow"><i class="fas fa-dumbbell"></i> Medellín, Colombia</span>
 
-<div class="about-banner-full" id="about" style="background-image: url('img/gymelite.webp');">
-    <div class="about-banner-overlay"></div>
-    <div class="about-banner-content">
-        <h2>Iron Spirit</h2>
-        <p>Entrena en instalaciones de élite. Aquí cada rep cuenta.</p>
-        <a href="#services" class="btn">Explorar</a>
+        <!-- Título principal -->
+        <h1 class="home-title" id="homeTitle">
+            <span class="home-title-accent">Iron</span> Spirit
+        </h1>
+
+        <!-- Tagline -->
+        <p class="home-tagline">Donde la disciplina se convierte en resultados.</p>
+
+        <!-- CTAs -->
+        <div class="home-cta-group">
+            <a href="#pricing" class="home-btn-primary">Únete ahora</a>
+            <a href="#galeria" class="home-btn-ghost">Ver instalaciones</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="home-stats">
+            <div class="home-stat">
+                <strong>+1200</strong>
+                <span>Miembros activos</span>
+            </div>
+            <div class="home-stat-divider" aria-hidden="true"></div>
+            <div class="home-stat">
+                <strong>8</strong>
+                <span>Años de experiencia</span>
+            </div>
+            <div class="home-stat-divider" aria-hidden="true"></div>
+            <div class="home-stat">
+                <strong>15</strong>
+                <span>Entrenadores certificados</span>
+            </div>
+        </div>
+
     </div>
+
+    <!-- Scroll indicator -->
+    <div class="home-scroll" aria-hidden="true">
+        <span></span>
+    </div>
+
 </div>
-<!-- la sección acerca  termina -->
+<!--Sección de inicio termina-->
 
 
 <!-- carrusel  -->

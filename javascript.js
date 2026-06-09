@@ -35,21 +35,18 @@
 
 (() =>{
     let home = document.querySelector('.home');
-    let title = document.querySelector('.home h1');
+    let title = document.querySelector('#homeTitle');
+
+    if (!home || !title) return;
 
     home.onmousemove = e =>{
-
         let r = home.getBoundingClientRect();
-        let x = (e.clientX - r.left - r.width / 2) / r.width * 40;
-        let y = (e.clientY - r.top - r.height / 2) / r.height * 40;
-
+        let x = (e.clientX - r.left - r.width / 2) / r.width * 25;
+        let y = (e.clientY - r.top - r.height / 2) / r.height * 25;
         title.style.transform = `translate(${-x}px, ${-y}px)`;
     }
 
-
-    home.onmouseleave = () =>title.style.transform = ``;
-
-
+    home.onmouseleave = () => title.style.transform = ``;
 
 })();
 
@@ -208,4 +205,3 @@
         setTimeout(() => { success.style.display = 'none'; }, 5000);
     });
 })();
-

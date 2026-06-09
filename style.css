@@ -1,5 +1,3 @@
-
-
 :root{ /* Define variables globales reutilizables en todo el CSS */
     --color-main: #c40600; /* Color principal: */
     --bg-main:#141418; /* color para fondo principales */
@@ -119,66 +117,227 @@ section{
 
 
 
-.home{
-    text-align: center; /* Centra el contenido de la sección hero */
-    position: relative; /* Necesario para posicionar los pseudo-elementos de las olas */
-    overflow: hidden; /* Oculta el desbordamiento de las olas animadas */
-    z-index: 0; /* Define el contexto de apilamiento base */
+/* =============================================
+   HOME — Hero sin imágenes, 100% CSS
+   ============================================= */
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-main);
 }
 
-.home .flex{
-    padding-top: 8rem; /* Empuja el contenido hacia abajo para no quedar bajo el header fijo */
-    padding-bottom: 0; /* Sin padding inferior */
+/* Slash diagonal rojo — el elemento firma */
+.home-slash {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
 }
 
-
-.home .flex h1{
-    font-size: 19vw; /* Tamaño gigante relativo al ancho del viewport */
-    color:transparent; /* Hace el texto transparente para mostrar el degradado */
-    background: linear-gradient(var(--color-main),transparent); /* Degradado hacia transparente */
-    background-clip: text; /* Recorta el fondo para que solo se vea dentro del texto */
-    position: relative; /* Permite usar z-index */
-    z-index: -1; /* Lo coloca detrás de la imagen del modelo */
-    margin-bottom: -9%; /* Sube la imagen para que se superponga al texto */
-    user-select: none; /* Evita que el usuario pueda seleccionar el texto decorativo */
+.home-slash::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55%;
+    height: 130%;
+    background: linear-gradient(
+        135deg,
+        rgba(196,6,0,.18) 0%,
+        rgba(196,6,0,.06) 60%,
+        transparent 100%
+    );
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.home .flex img{
-    width: 100%; /* La imagen ocupa todo el ancho disponible */
-    z-index: 1; /* Se muestra sobre el título h1 */
+.home-slash::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    width: 2px;
+    height: 60%;
+    background: linear-gradient(to bottom, transparent, var(--color-main), transparent);
+    opacity: .5;
 }
 
-.home::before,
-.home::after{ /* Pseudo-elementos que crean las olas animadas al fondo de la sección */
-    content:''; /* Necesario para mostrar el pseudo-elemento */
-    position: absolute; /* Se posiciona relativo a .home */
-    bottom: 0; /* Pegadas al fondo de la sección */
-    left: 0; /* Desde el borde izquierdo */
-    width: 200%; /* El doble del ancho para que la animación sea fluida */
-    height: 15%; /* Altura de las olas */
-    background: url('img/wave.svg') repeat-x; /* Imagen SVG de ola repetida horizontalmente */
-    background-size: auto 100%; /* La ola ocupa el 100% de la altura del pseudo-elemento */
+/* Contenido */
+.home-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12rem 4rem 8rem;
 }
 
-
-.home::before{
-    animation: wave 6s linear infinite alternate; /* Anima la primera ola de izquierda a derecha infinitamente */
+/* Eyebrow */
+.home-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--color-main);
+    margin-bottom: 2.5rem;
 }
 
-
-.home::after{
-    animation: wave 5s linear infinite alternate-reverse; /* Anima la segunda ola en dirección contraria */
-    z-index: -1; /* La pone detrás de la primera ola */
-    opacity: .4; /* La hace más transparente para dar profundidad */
+.home-eyebrow i {
+    font-size: 1.2rem;
 }
 
-@keyframes wave{ /* Define la animación de movimiento de las olas */
-    0%{
-        background-position: 0; /* Posición inicial de la ola */
-    }
-    100%{
-        background-position: -100%; /* La ola se desplaza completamente hacia la izquierda */
-    }
+/* Título */
+.home-title {
+    font-size: clamp(6rem, 13vw, 14rem);
+    font-weight: 900;
+    line-height: .92;
+    letter-spacing: -.03em;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    will-change: transform;
+    display: block;
+}
+
+.home-title-accent {
+    color: var(--color-main);
+    display: inline-block;
+    position: relative;
+}
+
+/* Tagline */
+.home-tagline {
+    font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+    color: rgba(255,255,255,.55);
+    font-weight: 400;
+    letter-spacing: .01em;
+    max-width: 52rem;
+    margin-bottom: 4rem;
+    line-height: 1.5;
+}
+
+/* Botones CTA */
+.home-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 6rem;
+}
+
+.home-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.4rem 3.6rem;
+    background: var(--color-main);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
+    transition: background .2s, clip-path .2s;
+}
+
+.home-btn-primary:hover {
+    background: #a30500;
+    clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+}
+
+.home-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.3rem 3.4rem;
+    border: 1.5px solid rgba(255,255,255,.25);
+    color: rgba(255,255,255,.8);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    transition: border-color .2s, color .2s;
+}
+
+.home-btn-ghost:hover {
+    border-color: var(--color-main);
+    color: var(--color-main);
+}
+
+/* Stats */
+.home-stats {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.home-stat strong {
+    display: block;
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -.02em;
+}
+
+.home-stat span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.4);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-top: .5rem;
+}
+
+.home-stat-divider {
+    width: 1px;
+    height: 4.5rem;
+    background: rgba(255,255,255,.15);
+    flex-shrink: 0;
+}
+
+/* Scroll indicator */
+.home-scroll {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.home-scroll span {
+    display: block;
+    width: 2px;
+    height: 5rem;
+    background: linear-gradient(to bottom, var(--color-main), transparent);
+    animation: scrollLine 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+    0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+    50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    51%  { transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+/* Responsive home */
+@media(max-width: 768px) {
+    .home-content { padding: 10rem 2.5rem 7rem; }
+    .home-stats { gap: 2.5rem; }
+    .home-stat-divider { height: 3.5rem; }
+    .home-slash::before { right: -15%; width: 70%; }
+}
+
+@media(max-width: 450px) {
+    .home-content { padding: 9rem 2rem 6rem; }
+    .home-cta-group { flex-direction: column; align-items: flex-start; }
+    .home-stats { gap: 2rem; }
+    .home-stat-divider { display: none; }
 }
 
 .about .row{
@@ -692,66 +851,7 @@ section{
 }
 
 
-/*ABOUT BANNER FULL-WIDTH */
-
-
-.about-banner-full { /* Contenedor principal del banner */
-    width: 100%; /* Hace el banner más ancho que su contenedor (puede generar overflow horizontal) */
-    height: 40rem; /* Altura fija del banner */
-    position: relative; /* Permite posicionar elementos hijos en relación a este contenedor */
-    background-size: cover; /* La imagen de fondo cubre todo el contenedor */
-    background-position: center; /* Centra la imagen de fondo */
-    display: flex; /* Activa flexbox */
-    align-items: flex-end; /* Alinea el contenido al fondo verticalmente */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde */
-}
-
-.about-banner-full .about-banner-overlay { /* Capa oscura encima del fondo */
-    position: absolute; /* Se posiciona respecto al contenedor padre */
-    inset: 0; /* Ocupa todo el espacio (top, right, bottom, left = 0) */
-    background: linear-gradient( /* Degradado para oscurecer el fondo */
-        to right, /* Dirección del degradado de izquierda a derecha */
-        rgba(20,20,24,.92) 0%, /* Color oscuro al inicio */
-        rgba(20,20,24,.55) 45%, /* Transición intermedia */
-        rgba(20,20,24,.15) 100% /* Más transparente al final */
-    );
-}
-
-.about-banner-full .about-banner-content { /* Contenido visible encima del banner */
-    position: relative; /* Necesario para controlar el z-index */
-    z-index: 2; /* Coloca el contenido por encima del overlay */
-    padding: 4rem 5rem; /* Espaciado interno (vertical y horizontal) */
-    max-width: 1200px; /* Limita el ancho máximo */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 0 auto; /* Centra horizontalmente */
-}
-
-.about-banner-full .about-banner-content h2 { /* Título principal */
-    font-size: clamp(3.5rem, 6vw, 7rem); /* Tamaño responsive entre 3.5rem y 7rem */
-    font-weight: 900; /* Grosor de letra muy alto */
-    color: var(--white); /* Color blanco usando variable */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    letter-spacing: .05rem; /* Espaciado entre letras */
-    margin-bottom: 1rem; /* Separación inferior */
-    line-height: 1; /* Altura de línea compacta */
-}
-
-.about-banner-full .about-banner-content p { /* Texto descriptivo */
-    font-size: 1.6rem; /* Tamaño de fuente */
-    color: rgba(255,255,255,.75); /* Blanco con opacidad */
-    margin-bottom: 2.5rem; /* Espaciado inferior */
-    line-height: 1.6; /* Altura de línea más legible */
-}
-
-@media(max-width:768px) { /* Estilos para tablets y pantallas medianas */
-    .about-banner-full { height: 26rem; } /* Reduce la altura del banner */
-    .about-banner-full .about-banner-content { padding: 3rem 2rem; } /* Reduce el padding */
-    .about-banner-full .about-banner-content h2 { font-size: 3.5rem; } /* Reduce el tamaño del título */
-}
-
-@media(max-width:450px) { /* Estilos para móviles pequeños */
-    .about-banner-full { height: 22rem; } /* Altura aún más reducida */
-}
+/* about-banner-full eliminado — reemplazado por nuevo hero */
 
 
 
