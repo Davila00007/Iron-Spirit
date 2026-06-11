@@ -117,7 +117,9 @@ section{
 
 
 
-/*home*/
+/* =============================================
+   HOME — Hero sin imágenes, 100% CSS
+   ============================================= */
 
 .home {
     position: relative;
@@ -299,40 +301,19 @@ section{
     flex-shrink: 0;
 }
 
-/* Scroll indicator */
-.home-scroll {
-    position: absolute;
-    bottom: 3.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
 
-.home-scroll span {
-    display: block;
-    width: 2px;
-    height: 5rem;
-    background: linear-gradient(to bottom, var(--color-main), transparent);
-    animation: scrollLine 1.8s ease-in-out infinite;
-}
-
-@keyframes scrollLine {
-    0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
-    50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
-    51%  { transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
-}
 
 /* Responsive home */
 @media(max-width: 768px) {
-    .home-content { padding: 10rem 2.5rem 7rem; }
+    .home { min-height: auto; }
+    .home-content { padding: 10rem 2.5rem 4rem; }
     .home-stats { gap: 2.5rem; }
     .home-stat-divider { height: 3.5rem; }
     .home-slash::before { right: -15%; width: 70%; }
 }
 
 @media(max-width: 450px) {
-    .home-content { padding: 9rem 2rem 6rem; }
+    .home-content { padding: 9rem 2rem 3.5rem; }
     .home-cta-group { flex-direction: column; align-items: flex-start; }
     .home-stats { gap: 2rem; }
     .home-stat-divider { display: none; }
