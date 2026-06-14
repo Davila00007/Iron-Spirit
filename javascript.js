@@ -137,6 +137,35 @@
 
 
 
+// Acordeón de entrenadores
+
+(() => {
+    const cards = document.querySelectorAll('.trainer-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+        const btn = card.querySelector('.trainer-toggle-btn');
+        btn.addEventListener('click', () => {
+            const isOpen = card.classList.contains('open');
+
+            // Cerrar todas
+            cards.forEach(c => {
+                c.classList.remove('open');
+                c.querySelector('.trainer-toggle-btn').setAttribute('aria-expanded', 'false');
+                c.querySelector('.trainer-toggle-btn').innerHTML = 'Saber más <i class="fas fa-chevron-down"></i>';
+            });
+
+            // Si estaba cerrada, abrir esta
+            if (!isOpen) {
+                card.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.innerHTML = 'Cerrar <i class="fas fa-chevron-down"></i>';
+            }
+        });
+    });
+})();
+
+
 // Filtro de productos en la sección "Productos"
 
 (() => {
