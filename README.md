@@ -6,7 +6,7 @@ Proyecto de sitio web completo para un gimnasio, desarrollado con **HTML, CSS y 
 
 ##  Vista general
 
-Sitio web moderno, oscuro y responsive para el gimnasio **Iron Spirit**, con diseño profesional, animaciones CSS, secciones interactivas y hero 100% sin imágenes optimizado para máximo rendimiento en PageSpeed.
+Sitio web moderno, oscuro y responsive para el gimnasio **Iron Spirit**, con diseño profesional, animaciones CSS, secciones interactivas, optimizado para máximo rendimiento en PageSpeed.
 
 ---
 
@@ -124,9 +124,6 @@ Durante el desarrollo de este proyecto practiqué y apliqué:
   </a>
   <a href="https://www.linkedin.com/in/micchael-davila-orozco/">
     <img src="https://skillicons.dev/icons?i=linkedin" />
-  </a>
-  <a href="mailto:davilamichaelnn@gmail.com">
-    <img src="https://skillicons.dev/icons?i=gmail&theme=light" />
   </a>
 </p>
 
